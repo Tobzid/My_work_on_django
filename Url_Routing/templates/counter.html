@@ -1,0 +1,14 @@
+<style>
+a{
+    text-decoration: none;
+}
+
+</style>
+
+
+
+{% for post in posts%}
+
+<h1> <a href="{% url 'post' post %}">Post</a></h1>
+
+{% endfor %}
