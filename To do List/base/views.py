@@ -12,9 +12,6 @@ from django.contrib.auth import login
 
 from .models import Task
 
-
-
-
 # Create your views here.
 class CustomLoginView(LoginView):
     template_name = 'base/login.html'
@@ -40,7 +37,6 @@ class RegisterPage(FormView):
             return redirect('tasks')
         return super(RegisterPage, self).get(*args, **kwargs)
         
-
 class TaskList(LoginRequiredMixin, ListView):
     model = Task
     context_object_name = 'tasks'
